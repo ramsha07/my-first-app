@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  let arr = [ {name:"Basit"}, {name: "Ghous"}];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {arr.map((item, index)=> {
+          return (
+            <li key ="index"> {item.name} </li>
+          )
+        })}
+      </ul>
     </div>
   );
 }
 
 export default App;
+/*
+In this example we have created an array with the elements having objects. If you want to write 
+JS in React then you have to use curly brackets. To get the data from the array we have used .map()
+function that takes two parameters first is the item and second is the index of the item.
+Now inside the curly brackets if we want to use HTML we have to write return with parenthesis if you 
+want to write code below the line. Necxt inside the li we have called the name of the item inside parenthesis as it
+is JS. 
+Note we have to write (key = "index") inside the <li> as prop where we have called the array element, 
+if not then result in error
+
+*/
