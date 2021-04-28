@@ -2,69 +2,57 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Using inline css in React:
+If you want to use inline css inside a HTML element then you have to use curly brackets instead og inverted commas. 
+Inside the HTML element type <h1 style = {{color: 'red', fontSize: 18}}></h1>
+Note that instead of using - to seperate CSS properties use camelCase to define properties. If you are using any name property then use inverted comma and if using number property then type it directly. 
 
-### `npm start`
+## Using Shortcut Keys in React:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+While using HTML elements in React components you will notice that shortcut keys are not working, to make it work change the extension of the component from 'App.js' to 'App.jsx'
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Closing a Self Closing tag is must in React
+If you are using any self closing tag like img, br etc you have to close the tag with a forward slash. In valnilla HTML it was not necessary to put a forward slash at the end, but in React you have to write a forward slash.
 
-### `npm test`
+## Installing dependencies to React App using npm install
+Suppose you accidently deleted your node modules folder where all of your dependencies were saved. When the folder is deleted you cannot run your installed dependencies. OR you have cloned a project from github and you are running the app, and the app is not running because the packages are not installed in your computer.
+To solve this problem you have to install the dependencies again.
+If you run npm install command on the terminal it will again install all the dependencies that were present inside the package.json file.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deploying React App on Firebase
+1).Run the command on terminal 'npm run build'. After this command a folder is created by the name of build
+2). Now you can deploy the app on firebase or any other server.
 
-### `npm run build`
+## Creating Multiple Components in React and exporting and importing them 
+You can create multiple components inside a single file and export them like this
+export {
+    Header, 
+    Logo,
+};
+Now if you want to import the component inside another one you have to use curly brackets and import both the comoponents inside of it like this:
+import {Header, Logo} from './components/Header';
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Importing Images in Components and using in HTML tags
+Download the image that you want to use import it same as that of other files.
+Now if you want to use it in your image tag you have to place the name in src surrounded by curly brackets not quotes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+import image from './images/picture.jpg'; // importing image form src
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src={image} />  //using image in img tag
 
-### `npm run eject`
+# States in React:-
+Stat is an object of comoponent that can be accessed anywhere inside the component. From the state we can get data, change it and render it on the DOM. The state basically manages all the data present inside the component. State is also used to add and update a value given by a user.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Creating State in React:
+To create a state inside the class component you have to use constructor method and super method inside of which you will create an object
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+class App extends Component {
+    constructor(){
+        super()
+        this.state = {
+            name: "Shoaib Tahie",
+            email: shoaibtahir97@gmail.com
+        }
+    }
+}
