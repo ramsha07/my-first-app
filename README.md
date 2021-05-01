@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
@@ -106,3 +107,6 @@ You can also send real data using name = "this.state.name"
 Create an arrow function with a parameter of prop or any name in parent component then pass the function inside the <Header/> as props. Inside the Header component create a button and inside button create an onclick event and pass the props like this
 onCLick={()=> this.props.get_props("saylani")}
     Now inside the function that you created in App you also passed a parameter now in that parameter you will recieve your data from child, you can console.log the data or maniplu
+=======
+This project is created to learn key concepts of react in detail.
+>>>>>>> 96d17c912cdc41881245fc9d7e56a86c14aa7920
