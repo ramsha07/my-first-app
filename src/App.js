@@ -1,16 +1,26 @@
 import './App.css';
+// import State from './components/State';
+import Data from './components/Data';
 
 function App() {
-  let arr = [ {name:"Basit"}, {name: "Ghous"}];
+  // let arr = [ {name:"Basit"}, {name: "Ghous"}];
+
+ function get_data(name) {
+  console.log(name)
+ }
+
   return (
     <div className="App">
-      <ul>
+      {/* <ul>
         {arr.map((item, index)=> {
           return (
             <li key ="index"> {item.name} </li>
           )
         })}
-      </ul>
+      </ul> */}
+      {/* <State /> */}
+      {/* <Data  name="Shoaib" email="shoaibtahir97@gmail.com"/> */}
+      {/* <Data function={get_data}/> */}
     </div>
   );
 }
